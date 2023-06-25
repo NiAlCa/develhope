@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--Poniendo ! y enter creas directamente la estructura html-->
+<html lang="en">
+  <head>
+    <!--la función de la cabecera es contener los metadatos del documento-->
+    <meta charset="UTF-8" />
+    <!--Este elemento simplemente especifica la codificación de caracteres del documento-->
+    <scfipt src="script.js"></scfipt>
+    <!--De esta manera traeriamos nuestro JS al html-->
+    <link rel="stylesheet" href="style.css" />
+    <!--De esta manera traeriamos nuestro CSS al html-->
+    <link rel="icon" type="image/x-icon" href="icon.ico" />
+    <!--De esta manera pondriamos un icono a nuestra web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apuntes</title>
+    <!--title es un metadato que modifica el titulo de la pstaña-->
+    <meta name="author" content="Nicolae Alexandru Casiean" />
+    <!--name especifica el tipo de metadato del que se trata; es decir, qué tipo de información contiene.
+                                                content especifica el contenido del metadato en sí.-->
+    <meta name="Apuntes" content="El area de apuntes de html" />
+
+    <!--  
+            el prtocolo opengraph es un protocolo que permite que nuestra
+            web se vea mas atractiva en las RRSS
+
+            Esto son unas pocas etiquetas basicas opengraph que se suelen usar:
+
+            og:title: El título de la página. Por lo general, esto es lo mismo 
+            que la etiqueta de su página web, a menos que desee presentarla de manera diferente.<title>
+
+            og:type: El "tipo" de sitio web que tiene. Explicaré más en la 
+            siguiente sección, aunque un "tipo" genérico es "sitio web".
+
+            og:image: debe ser un enlace a una imagen que te gustaría representar tu
+            contenido. Debe ser una imagen de alta resolución que las redes sociales utilizarán en sus feeds.
+
+            og:url: Esta debe ser la URL de la página actual.
+
+            og:description: Una descripción de su página. De manera similar a , esto puede ser lo 
+            mismo que la etiqueta de su sitio web, a menos que desee presentarlo de manera 
+            diferente.og:title<meta type=“description”>
+            
+            og:locale: Si desea localizar sus etiquetas, probablemente tenga sentido
+             incluir la configuración regional. El formato es , donde el
+              valor predeterminado es .language_TERRITORYen_US
+           
+            og:site_name: el nombre del sitio web general en el que se encuentra su contenido.
+             Si estás en una página de publicación de blog, es posible que tengas un título
+              de publicación de blog, donde el sería el nombre de tu blog.titlesite_name
+           
+            og:video: ¿Tienes un video que respalde tu contenido? Aquí hay una oportunidad
+             de incluirlo. Añade un enlace a tu vídeo con esta etiqueta.
+        -->
+  </head>
+  <body>
+    <!-- Etiquetas de estructura y diseño
+
+    <main> encierra el contenido particular a esta página. Utilizaremos <main> solamente una vez para cada página y lo situaremos directamente dentro del elemento <body>. Es mejor que no lo anidemos en otros elementos.
+    <article> encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la página (por ejemplo una entrada en un blog).
+    <section> es parecido al elemento <article>, pero se usa más para agrupar cada parte de la página que, por su funcionalidad, constituye una sección en sí misma (por ejemplo un minimapa o un conjunto de titulares y resúmenes). Se considera una buena práctica comenzar cada una de estas secciones con un título de encabezado (heading); observa que podemos subdividir artículos (<article>) en distintas secciones (<section>), o también secciones en distintos artículos, dependiendo del contexto.
+    <aside> incluye contenido que no está directamente relacionado con el contenido principal, pero que puede aportar información adicional relacionada indirectamente con él (resúmenes, biografías del autor, enlaces relacionados, etc.).
+    <header> representa un grupo de contenido introductorio. Si este es «hijo» de un elemento <body>, se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento <article> o un elemento <section>, entonces simplemente será el encabezado particular de cada sección (por favor, no lo confundas con títulos y encabezados).
+    <nav> contiene la funcionalidad de navegación principal de la página. Los enlaces secundarios, etc., no entrarán en la navegación.
+    <footer> representa un grupo de contenido al final de una página
+  -->
+
+    <h1>Cada seccion tiene que estar delimitada por un encabezado</h1>
+    <!--Hay seis elementos de encabezado:
+         <h1> , <h2> , <h3> , <h4> , <h5>  y <h6> -->
+    <div id="text__head" class="text">
+      <p>
+        <!--Los id y las class son un atributo con el cual indentificamos el contenido para usar en el futuro en CSS o JS-->
+        En html Cada parrafo tiene que <span>La alcachofa</span>estar delimitado
+        por un elemento p
+      </p>
+    </div>
+    <!--los div son contenedores, sirven para meter el contenido en un bloque-->
+    <!--<span> Es un bloque en linea, quiere decir que no separar el contenido en un bloque aparte-->
+
+    <pre>Este texto no tiene formato</pre>
+    <!--La etiqueta pre se usa para poner texto preformado por html
+    solo usar esta etiqueta en casos muy especificos-->
+
+    <blockquote>Esto es una nota</blockquote>
+    <!--blockquote -cita en bloque . Crea citas en bloque, marca las citas a otros autores o documentos -->
+
+    <!--Listas no ordenadas-->
+    <ul>
+      <li>leche</li>
+      <li>huevos</li>
+      <li>pan</li>
+      <li>hummus</li>
+    </ul>
+    <!--Listas ordenadas-->
+    <ol>
+      <li>Conduce <em>patata</em>hasta el final de la calle</li>
+      <li>Gira a la <strong>ceniza</strong>derecha</li>
+      <li>Sigue <b>izquierdo </b>derecho por las dos primeras glorietas</li>
+      <li>Gira a la izquierda <i>mercadona</i>en la tercer glorieta</li>
+      <li>
+        El colegio está a tu derecha, <u>submarino</u>300 metros más adelante
+      </li>
+    </ol>
+
+    <!--Con <em></em> damos enfasis al texto-->
+    <!--Con <strong></strong> damos importancia fuerte al texto-->
+    <!--con <b> (negrita o «bold»), <i> (cursiva o «italic») y <u> (subrayado o «underline»)-->
+
+    <!--Hiperenlace-->
+    <p>
+      Crea un enlace a
+      <!--Con <a> creamos el hipervinculo
+        con href la pagina a la que se redirije
+        con title le damos una descripcion-->
+      <a
+        href="https://www.mozilla.org/es-ES/"
+        title="El mejor lugar para encontrar más información acerca de la misión de Mozilla
+            y cómo contribuir"
+        >la página de inicio de Mozilla</a
+      >.
+      <!--Tambien se lo podemos aplicar a la etiqueta de imagenes-->
+    </p>
+
+    <a
+      href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
+      download="firefox-latest-64bit-installer.exe"
+    >
+      Descarga la última versión de Firefox para Windows (64 bits) (Español,
+      es-MX)
+    </a>
+    <!--De esta manera estariamos creando un enlace de descarga 
+    el atributo download se usa para hacer referencia a la descarga -->
+
+    <a
+      href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
+    >
+      Enviar un correo electrónico cc, bcc, asunto y cuerpo </a
+    ><!--De esta manera creariamos un enlace para enviar un correo electronico-->
+
+    <!--Con hr ponemos una raya horizontal para separar contenido-->
+    <hr />
+
+    <!--con br creamos un espacio-->
+    <br />
+
+    <!--Ejemplo de tabla-->
+    <table>
+      <!--la invocamos-->
+      <tr>
+        <!--creamos la fila-->
+        <td>&nbsp;</td>
+        <!--Creamos la celda-->
+        <td>Knocky</td>
+        <td>Flor</td>
+      </tr>
+      <tr>
+        <td>Raza</td>
+        <td>Jack Russell</td>
+        <td>Caniche</td>
+      </tr>
+      <tr>
+        <td>Edad</td>
+        <td>16</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Propietario</td>
+        <td>Suegra</td>
+        <td>Yo</td>
+      </tr>
+      <tr>
+        <td>Hábitos alimentarios</td>
+        <td>Come las sobras de todos</td>
+
+        <td>Mordisquea la comida</td>
+      </tr>
+    </table>
+
+    <!--De esta manera insertariamos una imagen-->
+    <figure>
+      <!--Con figure le estamos dando un bloque semantico-->
+      <img src="img.jpg" alt="una seta" />
+      <figcaption>Una seta</figcaption>
+      <!--Con figcaption estamos poniendo un pie de foto -->
+    </figure>
+    <!--Con src="Indicamos el origen de la imagen
+      alt="" estariamos dando una descripcion de la imagen
+    -->
+
+    <!--De esta manera insertariamos audio-->
+    <audio controls>
+      <!--Con controls le damos controles da pausar y poder mover la reproduccion podriamos poner autoplay para que se autoreproduzca-->
+      <source src="audio.mp3" type="audio/mp3" />
+    </audio>
+    <!--con src indicamos la ruta en la que se encuentra el audio
+        Con type senalamos el tipo de archivo del audio-->
+
+    <!--De esta manera insertariamos video-->
+    <video controls width="480">
+      <source src="video.mp4" type="video/mp4" />
+      <p>Podrias dejar un mensaje en caso de no cargar el video</p>
+    </video>
+
+    <form>
+      <!--Con form creamos un bloque de formulario-->
+      <label for="text">First name:</label
+      ><!--Con for indicamos a quien va dirigido el label-->
+      <input name="text" type="text" value="First name" />
+      <!--Aqui estamos creando una casilla de texto-->
+      <!--Con type le estamos diciendo el typo de dato que queremos introducir y con value le estamos dando un valor que se vera para el usuario
+        pre rellenando la casilla si queremos que se previsualice seria con placeholder-->
+          <!--Distintos tipos de input-->
+      <input type="button" value="Botón" />
+
+      <input type="checkbox" id="check1" name="check1" />
+      <label for="check1">Casilla de verificación</label>
+
+      <input type="color" id="color1" name="color1" />
+      <label for="color1">Selector de color</label>
+
+      <input type="date" id="date1" name="date1" />
+      <label for="date1">Selector de fecha</label>
+
+      <input type="datetime-local" id="datetime1" name="datetime1" />
+      <label for="datetime1">Selector de fecha y hora</label>
+
+      <input type="email" id="email1" name="email1" />
+      <label for="email1">Campo de correo electrónico</label>
+
+      <input type="file" id="file1" name="file1" />
+      <label for="file1">Campo de archivo</label>
+
+      <input type="hidden" id="hidden1" name="hidden1" value="secreto" />
+
+      <input type="image" src="/images/boton.png" alt="Botón de imagen" />
+
+      <input type="month" id="month1" name="month1" />
+      <label for="month1">Selector de mes</label>
+
+      <input type="number" id="number1" name="number1" />
+      <label for="number1">Campo numérico</label>
+
+      <input type="password" id="password1" name="password1" />
+      <label for="password1">Campo de contraseña</label>
+
+      <input type="radio" id="radio1" name="radio1" value="A" />
+      <label for="radio1">Botón de radio A</label>
+  
+      <input type="radio" id="radio2" name="radio1" value="B" />
+      <label for="radio2">Botón de radio B</label>
+
+      <input type="range" id="range1" name="range1" />
+      <label for="range1">Control deslizante</label>
+
+      <input type="reset" value="Restablecer" />
+
+      <input type="search" id="search1" name="search1" />
+      <label for="search1">Campo de búsqueda</label>
+
+      <input type="submit" value="Enviar" />
+
+      <input type="tel" id="tel1" name="tel1" />
+      <label for="tel1">Campo de teléfono</label>
+
+      <input type="text" id="text1" name="text1" />
+      <label for="text">Campo de texto</label>
+
+      <input type="time" id="time" name="time" />
+      <label for="time">Selector de hora</label>
+      
+      <input type="url" id="url" name="url" />
+      <label for="url">Campo de URL</label>
+      <input type="week" id="week" name="week" />
+      <label for="week">Selector de semana</label>
+
+      <!--Aqui veremos como hacer una lista de seleccion-->
+      <label for="favorite_fruit">Choose your favorite fruit:</label>
+      <select name="favorite_fruit" id="favorite_fruit"> <!--Con select invocamos la seleccion y con option damos las opciones-->
+        <option value="banana">Banana</option><!--Con value="" indicamos el valor a nivel interno y dentro de la opcion que saldra en la lista-->
+        <option value="apple">Apple</option>
+        <option value="grapes">Grapes</option>
+      </select>
+
+
+      <!--Text area es un input de texto pero mas largo-->
+      <label for="message">Escribe tu mensaje</label>
+      <textarea name="message" id="message">
+
+      </textarea>
+
+      <!--El elemento HTML <datalist> contiene un conjunto de elementos <option> que representan los valores disponibles para otros controles.-->
+
+      <!--A continuacion unos ejemplos de data list-->
+        <label for="ice-cream-choice">Choose a flavor:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+
+        <datalist id="ice-cream-flavors">
+            <option value="Chocolate">
+            <option value="Coconut">
+            <option value="Mint">
+            <option value="Strawberry">
+            <option value="Vanilla">
+        </datalist>
+
+        <input type="time" list="popularHours" />
+        <datalist id="popularHours">
+          <option value="12:00"></option>
+          <option value="13:00"></option>
+          <option value="14:00"></option>
+        </datalist>
+
+        <label for="tick">Tip amount:</label>
+        <input type="range" list="tickmarks" min="0" max="100" id="tick" name="tick" />
+        <datalist id="tickmarks">
+          <option value="0"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+        </datalist>
+        
+        <label for="pwd">Enter a password:</label>
+        <input type="password" list="randomPassword" id="pwd" />
+        <datalist id="randomPassword">
+          <option value="5Mg[_3DnkgSu@!q#"></option>
+        </datalist>
+
+      <button>Submit</button
+      ><!--Aqui estamos creando un boton para mandar el formulario-->
+    </form>
+  </body>
+</html>
