@@ -1,0 +1,24 @@
+/* 
+Create a simple HTML file with an h1 and a P tag.
+Create a CSS file and write a rule that gives the color 'blue' to the h1 text.
+Write a rule that gives the color 'lightgray' to the body background.
+Write a rule that gives a font size of 20px to the p tag.
+Write a rule that gives Arial, sans-serif as font family to all the texts.
+
+*/
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: lightgray;
+}
+
+h1{
+    color: blue;
+}
+
+p{
+    font-size: 20px
+}

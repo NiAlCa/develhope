@@ -1,0 +1,122 @@
+/*Selectores de presencia y valor */
+
+/* Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo href) o a partir de varias coincidencias diferentes con respecto al valor del atributo.
+
+selector [attr] ejemplo a[title] Relaciona elementos con un mismo nombre de atributo, attr (el valor que se indica entre corchetes).
+
+selector [attr=value] ejemplo a[href="https://example.com"]	  Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor es exactamente el mismo, value (la cadena de caracteres que se indica entre corchetes).
+
+selector [attr~=value]	ejemplo p[class~="special"]	 Relaciona los elementos con un mismo nombre de atributo, attr, cuyo valor es exactamente value, o los elementos con un mismo atributo attr que contiene uno o más valores de los cuales, al menos uno, coincide con value.
+Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio.
+
+selectot [attr|=value]	 ejemplo div[lang|="zh"]	Relaciona los elementos con un mismo nombre de atributo, attr, cuyo valor puede ser exactamente value o puede comenzar con value seguido inmediatamente por un guion.
+
+*/
+
+
+/*Selectores coincidentes con subcadenas */
+/* 
+Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases box-warning y box-error y quieres encontrar todos los elementos que empiezan con la cadena de caracteres “box-”, puedes seleccionarlas ambas con [class^="box-"].
+
+Selector [attr^=value]	ejemplo li[class^="box-"]	  Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor empieza exactamente con la subcadena de caracteres value.
+
+selector [attr$=value]	ejemlpo li[class$="-box"]	Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor termina exactamente con la subcadena de caracteres value.
+
+selector [attr*= ]	 ejemplo li[class*="box"]	 Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor incluye al menos una ocurrencia de la subcadena value en algún punto de la cadena.
+
+*/
+
+/*Pseudo clases 
+
+ Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. 
+
+ algunos de las pseudoclases que mas me han parecido interesantes
+
+ La pseudo-clase (en-US) :active de CSS representa un elemento (como un botón) que el usuario está activando
+La pseudo-clase :default de CSS representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados.
+La pseudo-clase :focus CSS representa un elemento (como una entrada de formulario) que ha recibido el foco. Quiere decir que se aplica cuando un elemento esta listo para ser usado 
+La pseudo-clase :first de CSS, utilizada con la regla-at @page, representa la primera página de un documento impreso.
+La pseudo-clase :first-of-type de CSS representa el primer elemento de su tipo entre un grupo de elementos hermanos.
+La pseudo-clase :first-child de CSS representa el primer elemento entre un grupo de elementos hermanos.
+La pseudo-clase :nth-child() de CSS coincide con uno o más elementos en función de su posición entre un grupo de hermanos.
+La pseudo-clase :nth-last-child() de CSS selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
+La pseudo-clase :nth-last-of-type() CSS coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
+La pseudo-clase :nth-of-type() de CSS selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
+La pseudo-clase :hover de CSS coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa.
+La pseudo-clase (en-US) :only-child de CSS representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o :nth-child(1):nth-last-child(1), pero con una especificidad menor.
+La pseudo-clase :only-of-type CSS representa un elemento que no tiene hermanos del mismo tipo.
+La pseudo-clase :visited de CSS representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.
+
+
+   */
+
+
+/* Pseudo elementos 
+
+Un pseudoelemento CSS se utiliza para dar estilo a partes específicas de un elemento.
+
+Por ejemplo, se puede utilizar para:
+
+Aplicar estilo a la primera letra, o línea, de un elemento
+Insertar contenido antes o después del contenido de un elemento
+
+En CSS, ::after crea un pseudo-elemento que es el último hijo del elemento seleccionado
+En CSS, ::before crea un pseudoelemento que es el primer hijo del elemento seleccionado
+El pseudo-elemento ::first-letter aplica estilos a la primera letra de la primera línea un elemento de bloque, sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+El Pseudoelemento ::first-line aplica estilos a la primera línea de un elemento de bloque. 
+
+
+
+*/
+
+/*Combinadores*/
+
+
+/* Selector de descendientes
+El selector descendiente coincide con todos los elementos que son descendientes de un elemento.
+
+En el ejemplo siguiente se seleccionan todos los elementos <p> dentro de los elementos <div>:*/
+div p {
+   background-color: yellow;
+ }   
+
+
+ /* 
+ Selector de niños (>)
+El selector secundario selecciona todos los elementos que son hijos de un elemento especificado.
+
+En el ejemplo siguiente se seleccionan todos los elementos <p> que son Hijos de un <div> elemento:
+ */
+ div > p {
+   background-color: yellow;
+ }
+
+ /* 
+ Selector de hermanos adyacentes (+)
+El selector del mismo nivel adyacente se utiliza para seleccionar un elemento que es directamente después de otro elemento específico.
+
+Los elementos hermanos deben tener el mismo elemento padre, y "adyacente" significa "inmediatamente después".
+
+En el ejemplo siguiente se selecciona el primer elemento <p> que se coloca inmediatamente después de los elementos <div>:
+ */
+ div + p {
+   background-color: yellow;
+ }
+
+ /* 
+ Selector general de hermanos (~)
+El selector general de elementos del mismo nivel selecciona todos los elementos que son los siguientes elementos del mismo nivel de un elemento especificado.
+
+En el ejemplo siguiente se seleccionan todos los elementos <p> que son los siguientes elementos del mismo nivel de los elementos <div>:
+ */
+ div ~ p {
+   background-color: yellow;
+ }
+
+
+/*
+ height
+ width
+ padding
+ margin
+ border añadira tamaño a nuestro elemento */
