@@ -1,0 +1,31 @@
+.box {
+  /* La posición "static" es la posición predeterminada de un elemento.
+     Los elementos con posición "static" no se ven afectados por las propiedades "top", "right", "bottom" o "left". */
+  position: static; 
+}
+
+.box2 {
+  /* La posición "relative" posiciona un elemento de forma relativa a su posición normal.
+     Puedes usar las propiedades "top", "right", "bottom" o "left" para ajustar la posición relativa del elemento.
+     Otros elementos no se ven afectados por un elemento con posición "relative". */
+  position: relative; 
+}
+
+.box3 {
+  /* La posición "sticky" es una combinación de "relative" y "fixed".
+     El elemento se comporta como "relative" hasta que se desplaza fuera de la vista, luego se vuelve "fixed" y se mantiene en su posición.
+     Puedes usar las propiedades "top", "right", "bottom" o "left" para ajustar la posición del elemento cuando se vuelve "fixed". */
+  position: sticky; 
+}
+
+.box4 {
+  /* La posición "absolute" posiciona un elemento de forma absoluta en relación con su elemento principal más cercano.
+     Puedes usar las propiedades "top", "right", "bottom" o "left" para ajustar la posición absoluta del elemento.
+     Un elemento con posición "absolute" se elimina del flujo normal de la página, lo que significa que otros elementos pueden ocupar su espacio.
+     Esto puede causar superposición si no se gestiona correctamente. */
+  position: absolute; 
+}
+
+.box5{
+  float: right;  /*La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado */
+}

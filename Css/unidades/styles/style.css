@@ -1,0 +1,44 @@
+/* Tipos de medida y sus utilidades
+px Píxeles. Esta medida es relativa respecto al dispositivo de salida. Ya que en cada dispositivo el tamaño del píxel varía.
+rem tiene como referencia de medida el font-size del elemento root, la etiqueta <html> (en inglés sería como "root em").
+em tiene como referencia de medida el font-size del elemento actual.
+% tiene como referencia el elemento padre
+vw tiene como referencia el ancho visible de la pantalla
+vh tiene como referencia la altura visible de la pantalla
+ch  1ch sería igual al ancho de un carácter "0" de la fuente utilizada
+
+*/ 
+
+/* 
+Funciones css
+
+*/
+
+.box{
+    background-color: linear-gradient(blue, white); /*Una función CSS utilizada para definir gradientes lineales    */
+    max-width: calc(100vw / 4); /*Permite realizar operaciones matemáticas sencillas como: sumar ( + ), restar ( - ), multiplicar ( * ) o dividir ( / ) */
+}
+
+/* variables */ 
+/*son entidades definidas por autores de CSS que contienen valores específicos que se pueden volver a utilizar en un documento. Se establecen mediante la notación de propiedades personalizadas (por ejemplo, --main-color: black;) y se acceden mediante la función var() (por ejemplo, color: var (--main-color);). */
+
+:root{ /*La variable se delcara en el root para poder ser usada en todo el documento */
+    --red: red; /*Cualquier dato que se repita puedes convertirlo en una variable */
+}
+
+.box{
+    color: var(--red); /*de esta manera usariamos nuestra variable */
+}
+
+/* importar css*/
+/*Podemos importar otras hojas de estilo y aplicarlas  tambien se pueden importar fuentes */
+@import url('import.css');
+
+
+/* Estados de los enlaces 
+
+a:link - un enlace normal, no visitado
+a:visited - un enlace que el usuario ha visitado
+a:hover - un enlace cuando el usuario pasa el ratón sobre él
+a:active - un enlace en el momento en que se hace clic en él
+*/

@@ -1,0 +1,28 @@
+.card {
+    max-width: 200px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+#goat {
+    width: 100%;
+}
+
+.card__tittle {
+    font-size: 20px;
+}
+
+.card__element {
+    max-height: 100%;
+    border-top: 1px solid rgb(165, 165, 165);
+    padding-left: 5%;
+}
+
+.link__card{
+
+  padding-top: 5px;
+  padding-bottom: 5px ;
+
+}
