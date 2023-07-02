@@ -1,0 +1,66 @@
+/* que es flexbox?
+Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños
+*/
+
+/* 
+Para comenzar, vamos a seleccionar qué elementos se van a presentar como cajas flexibles. Para ello, establecemos un valor especial de display en el elemento padre de los elementos que deseas editar.
+*/
+#box1{
+    display: flex; /*Esto hace que el elemento <section> se convierta en contenedor flex, y sus hijos en elementos flexibles. */ 
+}  /*
+El elemento al que le hemos dado un valor de display de flex actúa como un elemento a nivel de bloque en términos de cómo interactúa con el resto de la página, pero sus elementos secundarios se presentan como elementos flexibles.
+*/
+
+
+
+#box1{
+    flex-direction: column; /* Los elementos flexbox proporcionan una propiedad llamada flex-direction que especifica en qué dirección corre el eje principa */ 
+    /*Muestro solamente la propiedad column ya que por defecto viene la propiedad row
+    tambien se puede usar para que se vean los elementos en orden contrario
+    row-verse
+    column-verse*/   
+}
+
+#box1{
+    flex-wrap: wrap; /* especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas.   */
+   
+}
+/*
+una propiedad abreviada para flex-direction y flex-wrap: flex-flow.
+*/
+
+#box1{
+    flex-flow: row wrap;
+}
+
+div{
+    flex: 1; /*  indica la capacidad de un elemento flexible para alterar sus dimensiones  */
+    /*un valor de 1, lo que significa que todos ocuparán una cantidad igual del espacio libre restante después de que se hayan establecido elementos como el área de relleno y el margen */
+}
+
+div:nth-of-type(3) { /*El tercer div ocupa el doble del ancho disponible que los otros 2*/
+    flex: 2; /*ocupan 1/4 del espacio disponible cada uno. El tercero tiene dos unidades, por lo que ocupa 2/4 del espacio disponible (o 1/2). */
+  }
+
+
+
+  /*También puedes especificar un valor de tamaño mínimo dentro del valor flexible. Actualiza las reglas para tu artículo de la manera siguiente: */
+    div {
+    flex: 1 200px; 
+  }
+  
+  div:nth-of-type(3) {
+    flex: 2 200px; /*/*Esto establece básicamente que «a cada elemento flexible se le da primero 200px del espacio disponible. Después de eso, el resto del espacio disponible se reparte de acuerdo con las unidades de proporción». */ 
+  }
+
+  /*  
+  flex es una propiedad abreviada que puede especificar hasta tres valores diferentes:
+
+  flex-grow          El valor de proporción sin unidades 
+
+   flex-shrink,         en segundo valor de proporción sin unidades,  que entra en juego cuando los elementos flexibles desbordan el contenedor. Especifica cuánto de la cantidad desbordada se quita al tamaño de cada elemento flexible para evitar que el contenedor se desborde. 
+  
+    flex-basis.        El valor de tamaño mínimo que ya hemos visto. Se puede especificar individualmente usando el valor 
+
+
+  */
