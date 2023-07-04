@@ -56,11 +56,96 @@ div:nth-of-type(3) { /*El tercer div ocupa el doble del ancho disponible que los
   /*  
   flex es una propiedad abreviada que puede especificar hasta tres valores diferentes:
 
-  flex-grow          El valor de proporción sin unidades 
+    flex-grow          El valor de proporción sin unidades 
 
    flex-shrink,         en segundo valor de proporción sin unidades,  que entra en juego cuando los elementos flexibles desbordan el contenedor. Especifica cuánto de la cantidad desbordada se quita al tamaño de cada elemento flexible para evitar que el contenedor se desborde. 
   
     flex-basis.        El valor de tamaño mínimo que ya hemos visto. Se puede especificar individualmente usando el valor 
 
 
+no usar las propiedades flex sin abreviar a menos que realmente tengas que hacerlo (por ejemplo, para anular algo establecido previamente). Comportan mucho código añadido y suelen aportar confusión.
+
+Hay además algunas abreviaturas de valores que cubren la mayoría de los casos de uso
+
+flex: initial; el ítem se restablece con los valores iniciales de Flexbox
+
+flex: auto; es como con flex:initial pero en este caso los ítems pueden crecer y llenar el contendor así como encoger si se requiere.
+
+flex: none se crearán ítems flex totalmente inflexibles. Los ítems no pueden ni crecer ni encoger
+
   */
+
+
+
+/* Ahora vamos a ver las alineaciones */
+
+#box1{
+    display: flex; /*Como ya hemos visto antes estamos dandole una propiedad flex al contenedor */
+    justify-content: space-around; /* justify-content controla dónde se ubican los elementos flexibles sobre el eje principal/el que marca la flex-direction*/
+    align-items: center; /*Con align-items controla dónde se ubican los elementos flexibles en el eje transversal/va perpendicular al principal. */
+    gap: 10px; /* */
+  
+}
+
+
+
+
+/*Propiedades para justify-content 
+
+flex-start
+Los items flex se colocan comenzando desde el comienzo principal. El margen del primer item es alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al ras con el precedente.
+
+flex-end
+Los items flex se colocan comenzando desde el final principal. El margen del último item es alineado al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el siguiente.
+
+center
+Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.
+
+space-between
+Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.
+
+space-around
+Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.
+
+*/
+
+
+/*Propiedades para align-items
+flex-start
+El límite del margen transversal inicial del elemento flexible es unido al borde transversal final de la línea.
+
+flex-end
+El límite del margen transversal final del elemento flexible es unido al borde transversal final de la línea.
+
+center
+Los márgenes del elemento flexible son centrados dentro de la línea sobre su eje transversal. Si el tamaño transversal del elemento es mayor al del contenedor, se excederá por igual en ambas direcciones.
+
+start
+Los elementos se agrupan uno junto al otro hacia el borde inicial del contenedor de alineación en el eje apropiado.
+
+end
+Los elementos se agrupan uno junto al otro hacia el borde final del contenedor de alineación en el eje apropiado.
+
+baseline
+Todos los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea.
+
+stretch
+Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo de la línea, manteniendo sus restricciones de anchura y altura.
+
+*/
+
+/*Podemos ordenar los elemtos flexibles */
+
+#box1__1{
+  order: 2;
+}
+
+#box1__2{
+  order: 3;
+}
+
+#box1__3{
+  order: 1;
+}
+
+/*Puedes establecer valores de orden negativos para que los elementos aparezcan antes que los elementos establecidos con el valor 0*/
