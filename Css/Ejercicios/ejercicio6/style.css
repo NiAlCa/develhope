@@ -1,0 +1,137 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+
+#calculadora{
+  width: 300px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 100px;
+   display: grid;
+
+   grid-template-columns: repeat(4, 1fr) ;
+   grid-template-rows: repeat(6, 1fr) ;
+   grid-template-areas: "resultado resultado resultado resultado"
+                      "mas menos por dividir"
+                      "siete ocho nueve igual"
+                      "cuatro cinco seis igual"
+                      "uno dos tres igual"
+                      "cero punto ac igual"
+}  
+
+#resultado{
+  grid-area: resultado;
+  background-color: #424c52;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 30px;
+}
+
+#mas{
+   grid-area: mas;
+}
+
+#menos{
+   grid-area: menos;
+}
+
+#por{
+   grid-area: por;
+}
+
+#dividir{
+   grid-area: dividir;
+}
+
+#siete{
+   grid-area: siete;
+}
+
+#ocho{
+   grid-area: ocho;
+}
+
+#nueve{
+   grid-area: nueve;
+}
+
+#cuatro{
+   grid-area: cuatro;
+}
+
+#cinco{
+   grid-area: cinco;
+}
+
+#seis{
+   grid-area: seis;
+}
+
+#uno{
+   grid-area: uno;
+}
+
+#dos{
+   grid-area: dos;
+}
+
+#tres{
+   grid-area: tres;
+}
+
+#cero{
+   grid-area: cero;
+  border-bottom-left-radius: 5px;
+}
+
+#punto{
+   grid-area: punto;
+}
+
+#ac{
+   grid-area: ac;
+}
+
+#igual{
+   grid-area: igual;
+   background-color: #f77077;
+   border-bottom-right-radius: 5px;
+}
+
+
+#cero, #punto, #ac, #uno, #dos, #tres, #cuatro, #cinco, #seis, #siete, #ocho, #nueve{
+  background-color: #eff2f5;
+  
+}
+
+#mas, #menos, #por, #dividir{
+  background-color: #d2dce3;
+}
+
+
+/* bordes */
+
+div button, div p{
+  border: 1px solid gray;
+  font-weight: bold;
+  
+}
+
+#mas, #siete, #cuatro, #uno, #cero, #resultado{
+  border-left: 0px solid black;
+}
+#cero, #punto, #ac, #igual{
+  border-bottom: 0px solid black;
+}
+
+#resultado, #dividir, #igual{
+  border-right: 0px solid black;
+}
+
+
