@@ -1,0 +1,57 @@
+#box1{
+    display: grid; /*A dierencia de flex grid no tiene un comportamiento inmediato, sirve para cuadricular */
+   gap: 1rem; /*De esta manera definimos el espacio entre las columnas  */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /*asi definimos columnas*/ /*Fr coge el espacio disponible 
+    y divivde ese espacio para darle partes iguales a cada columna */
+    /*auto-fit lo usamos para dejar a grid que decida cuantas columnas quiere aplciar, podriamos usar auto-fill y esa conforme
+    lo necesite puede anadir mas filas/columnas aunque no haya mas contenido que anadir */
+    /*El repeat 2, 1fr es una forma de decirque que cree 2 columnas de 1 fr  
+    el minmax lo usamos para indicarle maximos y minimos para las responsividad*/
+    grid-template-rows:50px 100px 100px 100px 100px 100px 100px 100px ; /*De esta manera definimos las filsa  */  /* Cada valor que introduzcamos
+    equivaldra a una nueva columa/fila*/
+}
+
+#box1{
+    display: grid;
+    gap: 0.5 rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 100px 100px 200px ; 
+    grid-template-areas: "header header header header"
+                         "nav . content footer"  /* Una vez les hemos dado nombres, podriamos usar estos, en este caso estamos diciendo que header es la primera columna
+    nav la segunda y asi...  */  /*Podemos crear varias filas */
+                        "nav . content footer"/*El . representa la nada */
+                        "footer footer footer footer" 
+
+                        
+}
+
+#header{
+    grid-area: header; /*Solamente le estariamos dando nombre */
+}
+
+#nav{
+    grid-area: nav;
+}
+
+#content{
+    grid-area: content;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+/* Tambien podriamos indicar el espacio que van a ocupar de la siguiente manera*/
+
+#header, #footer{
+    grid-column: span 4; /* Asi para columnas*/
+}
+
+#nav{
+    grid-row: span 2; /*Asi para filas*/ 
+}
+
+#content{
+    grid-row: span2;
+    grid-column: span 2;
+}
