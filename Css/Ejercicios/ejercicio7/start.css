@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+#bloque-principal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr 1fr  0.5fr;
+    grid-template-areas: "green green green"
+                         "yellow red blue"
+                         "orange orange blue"
+    ;
+    max-height: 100vh;
+
+}
+
+#green{
+    grid-area: green;
+    max-height: 50%;
+}
+
+#yellow{
+    grid-area: yellow;
+}
+
+
+#orange{
+    grid-area: orange;
+}
+
+#red{
+    grid-area: red;
+}
+
+#blue{
+    grid-area: blue;
+}
+
+
+
+
+#yellow p{
+    grid-area: titulo;
+    
+   
+}
+
+#yellow ul {
+    grid-area: lista;
+    display: grid;
+    grid-template-columns: 100 px 100 px;
+    grid-template-rows: auto;
+    grid-template-areas: "yellowone yellowtwo"
+                         "yellowthree yellowfour";
+    
+}
+
+#yellow  ul  li:nth-child(1){
+    grid-area: yellowone;
+}
+
+#yellow  ul  li :nth-child(2){
+    grid-area: yellowtwo;
+}
+
+#yellow  ul  li:nth-child(3){
+    grid-area: yellowthree;
+}
+
+#yellow  ul  li:nth-child(4){
+    grid-area: yellowfour;
+}
+
+
+
+
+
+#red ul {
+    grid-area: lista;
+    display: grid;
+    grid-template-columns: 100 px 100 px;
+    grid-template-rows: auto;
+    grid-template-areas: "redone redtwo"
+                         "redthree redfour";
+    
+}
+
+
+#red  ul  li:nth-child(1){
+    grid-area: redone;
+}
+
+#red  ul  li :nth-child(2){
+    grid-area: redtwo;
+}
+
+#red  ul  li:nth-child(3){
+    grid-area: redthree;
+}
+
+#red  ul  li:nth-child(4){
+    grid-area: redfour;
+}
