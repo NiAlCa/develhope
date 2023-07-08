@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#menu{
+    display: none;
+}
+
+nav{
+    background-color: black ;
+}
+
+nav ul ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+nav  a{
+    text-decoration: none;
+}
+nav > ul > ul > li:first-child > a{ 
+    font-size: 3ch;
+}
+
+nav > ul ul ul{
+    display: none;
+}
+
+ ul ul ul li {
+    float:none;
+    width:150px
+   }
+
+ ul ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+
+ul ul li:hover > ul {
+    display:block;
+   }
+
+
+nav > ul ul > li:last-child{
+    padding-left: 3%;
+}
+
+
+nav > ul ul > li:nth-child(4) a{
+    color: gray;
+
+}
+
+nav > ul ul > li:nth-child(5) a{
+    color: rgb(56, 56, 56);
+
+}
+
+
+nav > ul ul > li:nth-child(5){
+    pointer-events: none;
+    cursor: default;
+    
+}
+
+
+
+#searchEngine{
+    height: 4ch;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 0px ;
+}
+
+
+
+#searchEngine[type="submit"]{
+    background-color: rgba(0, 0, 0, 0);
+    color: green;
+    border: 1px solid green;
+}
+
+#searchEngine[type="submit"]:hover{
+    background-color: green;
+    color: black;
+    border: 1px solid green;
+}
+
+
+@media (max-width: 768px){
+    #menu{
+        display: flex;
+        height: 50px;
+        width: 50px;
+    }
+
+    nav ul ul {
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+
+    nav > ul ul > li:last-child{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    #searchEngine{
+        width: 20%;
+    }
+
+    ul li:hover > ul {
+        display:block;
+       }
+
+        #menu:hover + ul{
+        display: block;
+       }
+}

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    gap: 5%;
+}
+
+
+
+
+@media /*Convocamos la funcion media */(max-width: 768px) /*le asignamos el parametro de ejecucion */{
+    /*y despues escribimos el codigo que queremos que se ejecute  */
+    body{
+        flex-direction: column;
+    }
+}
