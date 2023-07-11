@@ -1,0 +1,39 @@
+/*Con SaSS lo que logramos es poder anidar dentro el css */
+
+/*Iniciar sass para copilar automaticamente 
+sass --watch styles.scss style.css*/
+
+/*css normal */
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+    background-color: black;
+}
+
+/*Con sas  */
+
+a{
+    text-decoration: none;
+    &:hover{ /*El & es un selector, es el selector padre, sass al copilar sustituye directamente por el nombre del padre */
+        color: red;
+        background-color: black;
+    }
+} 
+
+
+/*css normal */
+
+p li, p a, ul li, ul a{
+    padding: 5px;
+}
+
+/*SaSS */
+
+p, ul{
+    li, a{
+        padding: 5px;
+    }
+}
