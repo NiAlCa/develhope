@@ -47,3 +47,21 @@ body{
     como podemos comprovar simplemente convocamos la variable, no hay que convocarla con la funcion var() */
 }
 
+/* directiva @extend */
+/* @extend se usa para copiar los parametros de una clase una etiqueta o un  id*/
+
+.error{
+    background-color: red;
+    color: red;
+    border-color: red;
+}
+
+.info{
+    font-size: 200px;
+    border: 3px solid black;
+    padding: 1rem;
+
+    &_error{
+        @extend .info;
+    }
+}
