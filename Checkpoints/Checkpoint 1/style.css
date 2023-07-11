@@ -38,7 +38,7 @@ body{
     justify-content: space-between;
     
 
-   
+   /*pading: 50px; */ /*hice un cambio sin querer en el git, esto es lo que estaba antes */
 }
 
 #center_top button, #center_top input{
@@ -61,7 +61,7 @@ body{
     align-self: flex-start;
     color: blue;
     background-color: white;
-    margin: 50px;
+    margin: 50px; /*hice un cambio aqui para probar a nivel personal, antes en los button no habia un margin, habia en la propiedad center_top la propiedad de margin */
 }
 
 footer{
