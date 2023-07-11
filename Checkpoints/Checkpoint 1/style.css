@@ -50,7 +50,7 @@ body{
     align-self: flex-end;
     color: blue;
     background-color: gray;
-    margin: 50px;
+    margin: 50px;   /*hice un cambio aqui para probar a nivel personal, antes en los button no habia un margin, habia en la propiedad center_top la propiedad de margin */
 }
 
 #center_top input{
