@@ -25,7 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 50px;
+   
 }
 
 #center_top{
@@ -38,7 +38,7 @@ body{
     justify-content: space-between;
     
 
-   padding: 50px;
+   
 }
 
 #center_top button, #center_top input{
@@ -50,6 +50,7 @@ body{
     align-self: flex-end;
     color: blue;
     background-color: gray;
+    margin: 50px;
 }
 
 #center_top input{
@@ -60,6 +61,7 @@ body{
     align-self: flex-start;
     color: blue;
     background-color: white;
+    margin: 50px;
 }
 
 footer{

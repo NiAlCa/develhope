@@ -1,0 +1,44 @@
+
+@mixin estilo-layout($color, $border-color, $font-size){
+    color: $color;
+    border: $border-color;
+    font-size: $font-size;
+
+
+}
+
+div{
+    @include estilo-layout(red,1px solid red, null);
+    width: 80%;
+    h1{
+
+        @include estilo-layout(green, null, null);
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-align: center;
+    }
+    section{
+        display: flex;
+        padding-bottom: 10px;
+        margin: 5px; 
+    }
+    article{
+        @include estilo-layout(null, 1px solid green, null);
+        text-align: center;
+    }
+    article:nth-child(odd){
+        @include estilo-layout(blue, null, null)
+    }
+    article:nth-child(even){
+        @include estilo-layout(red, null, null)
+
+    }
+    article:last-child{
+        @include estilo-layout(green, 1px solid blue, null);
+        margin: 0px auto;
+    }
+}
+
+
+
+
