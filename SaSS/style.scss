@@ -62,6 +62,8 @@ body{
     padding: 1rem;
 
     &_error{
-        @extend .info;
-    }
+        @extend .info;  /*Esto lo que hace es copiar el codigo de .info */
+        @extend .error; /*Esto lo que hace es copiar el codigo de .error */
+        text-decoration: underline; /*Podemos aplicarle mas estilos */
+    }   
 }
