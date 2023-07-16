@@ -1,0 +1,101 @@
+@use "funcion.scss" as f;
+@use "sass:color";
+
+$color-primary: green;
+$color-secundary: red;
+$color-ternary: blue;
+$base-color: black;
+$color-text: white;
+
+@mixin article-card($color, $border-color, $font-size) {
+  color: $color;
+  border-color: $border-color;
+  font-size: $font-size;
+}
+body {
+  display: flex;
+}
+div {
+  border: f.rem(1px) solid $color-secundary;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  %text {
+    text-align: center;
+    color: $color-primary;
+  }
+  h1 {
+    text-decoration: underline f.rem(1px) $color-ternary;
+    text-underline-offset: f.rem(8px);
+    @extend %text;
+  }
+  h2 {
+    @extend %text;
+    border: f.rem(1px) solid $color-secundary;
+    padding: f.rem(16px);
+    width: max-content;
+  }
+}
+
+section {
+  display: flex;
+  padding: f.rem(16px);
+
+  article {
+    border: f.rem(1px) solid $color-primary;
+    padding: f.rem(16px);
+    text-align: center;
+    justify-content: space-between;
+  }
+  &:last-child article:last-child, &:nth-of-type(2){
+    justify-content: space-between;
+    width: 100vw;
+  }
+}
+
+.article-blue {
+  @include article-card($color-ternary, $color-primary, f.rem(16px));
+}
+
+.article-red {
+  @include article-card($color-secundary, $color-primary, f.rem(16px));
+}
+.article-green {
+  @include article-card($color-primary, $color-ternary, f.rem(24px));
+  width: 95vw;
+}
+
+.section-1 {
+  gap: f.rem(32px);
+  flex-wrap: wrap;
+}
+
+@each $size in (1, 2, 3) {
+  .fs-#{$size}rem {
+    font-size: $size + rem;
+    width: f.rem(45px);
+    height: f.rem(45px);
+  }
+}
+
+@for $i from 1 through 20 {
+  $box-color: darken($color-text, $i * 5);
+  $box-color-text: lighten($base-color, $i * 5);
+  .box-#{$i} {
+    background-color: $box-color;
+    color: $box-color-text;
+    @if $i == 10 {
+      background-color: $color-ternary;
+      color: $color-secundary;
+      justify-content: start;
+      align-items: start;
+      font-weight: bold;
+    }
+  }
+}
+.fs-1rem,
+.fs-2rem {
+  justify-content: start;
+  align-items: start;
+}

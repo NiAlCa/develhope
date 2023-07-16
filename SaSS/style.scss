@@ -141,7 +141,7 @@ $base: "module.$color";
 
 
 
-
+/*@if controla si se evalúa o no un bloque. */
 
 @function bg-calc($color: blue, $invert: false){  /* el invert esta aqui par ael else y el if  */
     $complement:    color.comlement($color: color);
@@ -163,7 +163,9 @@ $base: "module.$color";
     }
 }  
 
-/*@each itera sobre cada una de las posicioens de nuestro mapa y luego ejecuta el codigo una vez por cada valor de la lista    Este bucle se basa en una lista de datos especificada por el usuario que el bucle recorrerá en cada vuelta*/
+
+
+/*@each evalúa un bloque para cada en una lista o cada par en un mapa. */
 
 @each $key, $value in $breakpoint{    
     @media (min-width: $value){
@@ -185,7 +187,7 @@ $base: "module.$color";
 <end> es el valor final de la variable
 
 La palabra clave through se utiliza para indicar que el bucle debe iterar desde el valor inicial hasta el valor final, incluyendo ambos valores*/
-
+/*@for evalúa un bloque de una determinada número de veces. */
 @for $index from 1 through 4{
     li:nth-child(#{$index}){
         font-size: $index + rem;
@@ -193,7 +195,7 @@ La palabra clave through se utiliza para indicar que el bucle debe iterar desde 
     }
 }
 
-/*los bucles while siguen funcionando mientras la condicion sea verdadera  */
+/*@while evalúa un bloque hasta que un Se cumple cierta condición.  */
 
 $index: 1;
 @while $index < 4{
