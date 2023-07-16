@@ -1,4 +1,4 @@
-@use "funcion.scss" as f;
+@use "funcion.scss" as *;
 @use "sass:color";
 
 $color-primary: green;

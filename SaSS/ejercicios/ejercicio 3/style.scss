@@ -1,4 +1,8 @@
 
+@use "module.scss";
+
+
+
 @mixin estilo-layout($color, $border-color, $font-size){
     color: $color;
     border: $border-color;
@@ -7,7 +11,6 @@
 
 }
 
-@use "module.scss";
 
 
 div{
@@ -22,8 +25,8 @@ div{
     }
     section{
         display: flex;
-        padding-bottom: rem(10px);
-        margin: rem(10px); 
+        padding-bottom: module.rem(10px);
+        margin: module.rem(10px); 
     }
     article{
         @include estilo-layout(null, 1px solid green, null);
