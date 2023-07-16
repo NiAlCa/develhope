@@ -7,10 +7,8 @@
 
 }
 
+@use "module.scss";
 
-@function rem($value) {
-    @return $value / 16px * 1rem;
-  }
 
 div{
     @include estilo-layout(red,1px solid red, null);

@@ -67,3 +67,140 @@ body{
         text-decoration: underline; /*Podemos aplicarle mas estilos */
     }   
 }
+
+
+/*la fnucion calc nos permite juntar dos unidades distintas como rem y px ejemplo a continuacion */
+
+$space: 1rem;
+
+p{
+    margin: calc($space + 1px);
+
+
+}
+
+/*Modulos de sass, sass tiene incorporado unos modulos que podemos usar*/
+
+/*modulo color, lo importante es saber que existen pero podemos profundizar mas sobre este tema en la documentacion de sass  */
+
+@use "sass:color"; /*de esta manera estariamos convocando el modulo de color
+ */
+
+p{
+    color: color.adjust(red, $ligjtmess: -30%); /*convocamos nuestro modulo con color. y con la funcionon adjust para modificar el brillo del color rojo */
+}
+
+@use "sass:map"; /*Este modulo sirve para crear mapas */
+
+$breakpoint: ( /*creamos el mapa */
+    "sm": 320px,
+    "md": 480px,
+    "lg": 768px,
+    "xl": 1024px 
+
+);
+
+@media (min-width: map.get($breakpoints, "sm")){ /*y le damos uso */
+    
+}
+
+/*tambien podemos usar modulos locales */
+
+@use "module.scss"; /*De esta manera importamos la hoja de scss que queremos usar, podemos llamar cosas desde module */
+
+
+$base: "module.$color"; 
+
+
+/*podemos usar la directiva @mixin para extender el codigo y poder modificarlo */
+
+
+@mixin button-color($color){    /* Generamos el codigo base y lo preparamos con mixin*/ /*generamos la variable color que usaremos mas tarde */
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid $color;
+    color: $color;
+    background-color: $color;
+}
+
+.button-red{
+    @include button-color(red);  /*De esta manera copiamos todas las propiedades de la clase de arriba y entre parentesis rellenamos la variable */
+}
+
+
+
+/*funciones en sass  */
+
+@function bg-calc($color: blue){
+    $complement: color.complement($color: $color);
+    $adjusted: color.adjust($complement, $lightness: 10%);
+    @return $adjusted;
+}
+
+/*flow control en saas */
+
+
+
+
+
+@function bg-calc($color: blue, $invert: false){  /* el invert esta aqui par ael else y el if  */
+    $complement:    color.comlement($color: color);
+    $adjusted:color.adjust($lightness: + 10%);
+    @if $inverrt{
+        @return color.invert($adjusted); /* lo que quiere decir el if es que si la condicion es verdadera, entonces ejecuta el codigo */
+    }@else if color.red($adjusted, $red) > 40{
+        @return $adjusted;
+    }@else {  /* el else se usa en caso de que la primera no sea verdadera*/  
+        @return color.invert($adjusted);
+    }
+    @return $adjusted; 
+}
+
+.palabra3{
+    p{
+        color: bg-calc(#12ddee, -30);
+        background-color: bg-calc(#12ddee, -30, true);
+    }
+}  
+
+/*@each itera sobre cada una de las posicioens de nuestro mapa y luego ejecuta el codigo una vez por cada valor de la lista    Este bucle se basa en una lista de datos especificada por el usuario que el bucle recorrerá en cada vuelta*/
+
+@each $key, $value in $breakpoint{    
+    @media (min-width: $value){
+        li::after {
+            content: "breakpoint: " + $key;
+        }
+    }
+}
+
+
+/*En Sass, el bucle @for se utiliza para repetir una serie de instrucciones un número determinado de veces. La sintaxis básica del bucle @for en Sass es la siguiente: */
+/*
+@for $variable from <start> through <end> {
+    Instrucciones
+  }*/
+/*
+  $variable es el nombre de la variable que se utilizará en cada iteración del bucle.
+<start> es el valor inicial de la variable.
+<end> es el valor final de la variable
+
+La palabra clave through se utiliza para indicar que el bucle debe iterar desde el valor inicial hasta el valor final, incluyendo ambos valores*/
+
+@for $index from 1 through 4{
+    li:nth-child(#{$index}){
+        font-size: $index + rem;
+
+    }
+}
+
+/*los bucles while siguen funcionando mientras la condicion sea verdadera  */
+
+$index: 1;
+@while $index < 4{
+    li:nth-child(#{$index}){
+        font-size: $index + rem;
+
+    }
+    $index: $index + 1;
+}
+
