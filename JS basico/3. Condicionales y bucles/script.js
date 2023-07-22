@@ -51,14 +51,53 @@ switch(num){ //convocamos el switch
         console.log("dafault")
 }
 
-//Bucles
+//Bucles Los bucles ofrecen una forma rápida y sencilla de hacer algo repetidamente. 
 
 
 /*for loop
 for(initalize our iterator; set our stopping condition; update our iterator)
 */ //la variable i solo existe dentro del contexto del bucle, fuera de este no. pero podemos coger una variable ya declarada y esta si que se existira fuera del bucle . 
+/* for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
+  instrucción
 
+El inicializador se ejecuta una vez, antes de que el bucle comience a ejecutarse.
+La condición se comprueba después de cada iteración del bucle. Si la condición es verdadera, el bloque de código se ejecuta de nuevo. Si la condición es falsa, el bucle termina.
+El actualizador se ejecuta después de cada iteración del bucle. Se utiliza para actualizar el valor de la variable que se utiliza en la condición.
+  */
+
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
+
+  /* 
+  Este bucle primero inicializa la variable i con el valor 1. A continuación, comprueba si la condición i <= 10 es verdadera. Si es así, el bloque de código se ejecuta, que imprime el valor de la variable i. A continuación, el actualizador incrementa el valor de la variable i en 1. El bucle se repite hasta que la condición i <= 10 sea falsa.
+  
+  */
 
  
 
-/*while loop */
+/*while loop 
+Una declaración while ejecuta sus instrucciones siempre que una condición especificada se evalúe como true.
+*/
+/* 
+while (condición)
+  expresión
+
+Si la condición se vuelve false, la instrucción dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
+
+La prueba de condición ocurre antes de que se ejecute la expresión en el bucle. Si la condición devuelve true, se ejecuta la expresión y la condición se prueba de nuevo. Si la condición devuelve false, la ejecución se detiene y el control se pasa a la instrucción que sigue a while.
+
+  */
+
+let i = 1;
+
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+
+/*
+Este código primero establece la variable i a 1. A continuación, comprueba si i es menor o igual a 10. Si es así, el código imprime el valor de i y luego incrementa i en 1. El bucle se repite mientras i sea menor o igual a 10. Cuando i sea mayor que 10, el bucle terminará.
+
+*/
