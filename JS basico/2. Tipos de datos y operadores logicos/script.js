@@ -44,3 +44,91 @@ let dog = { name : 'Spot', breed : 'Dalmatian' };
 /*Para recuperar la información almacenada en el objeto, puedes utilizar la siguiente sintaxis: */
 dog.breed
 
+
+
+
+/*CONVERSIONES */
+
+let str = "1";
+let nmr = 1;
+let bool = true; 
+
+let strANmr = Number(str); /*De esta manera convertimos un string en un numero */
+let nmrAStr = String(nmr);/*De esta manera convertimos un numero en string*/
+let nmrABool= Boolean(nmr); /*De esta manera convertimos a un booleano */
+
+
+/*COMPARADORES*/
+
+/* 
+Mayor/menor que:  a > b . a < b
+Mayor/menor que o igual a: a >= b . a <= b
+Iguales: , tenga en cuenta que el signo de doble igualdad significa la prueba de igualdad, mientras que uno solo significa una asignación.a == b . a = b
+igualdad estricta ===  prueba la igualdad total de un elemento Carlos === carlos, seria false. Carlos === Carlos seria true
+*/
+
+
+/* 
+Todos los operadores de comparación devuelven un valor booleano:
+
+true – significa "sí", "correcto" o "la verdad".
+false – significa "no", "incorrecto" o "no es la verdad".
+*/
+let alert = 0;
+alert: 2 > 1 ;  // true (correct)
+alert: 2 == 1 ; // false (wrong)
+alert: 2 != 1 ; // true (correct)
+
+
+
+/* 
+Los operadores de comparación devuelven un valor booleano.
+Las cadenas se comparan letra por letra en el orden "diccionario".
+Cuando se comparan valores de diferentes tipos, se convierten en números (con la exclusión de un estricto control de igualdad).
+Los valores y iguales entre sí y no son iguales a ningún otro valor.nullundefined==
+Tenga cuidado al usar comparaciones similares o con variables que ocasionalmente pueden ser . Verificar por separado es una buena idea.><null/undefinednull/undefined
+*/
+
+/*OPERADORES LOGICOS
+Hay cuatro operadores lógicos en JavaScript: solo veremos (OR), (AND)
+
+*/
+
+let a = 5
+let b = a > 10;
+let c = a > 1;
+
+/*|| (OR) */
+
+let result = b || c;
+
+console.log(result)//true
+
+/* Hay cuatro combinaciones lógicas posibles:
+
+Por asi decir, solo hace falta que una de la condiciones para que se vuelva true
+
+alert( true || true );   // true
+alert( false || true );  // true
+alert( true || false );  // true
+alert( false || false ); // false
+
+
+"||" encuentra el primer valor verídico
+*/
+
+
+/*&& (AND) */
+
+let result2 = b && c;
+console.log(result2)//false
+
+/* && por asi decir necesita que las dos condiciones sean verdaderas
+alert( true && true );   // true
+alert( false && true );  // false
+alert( true && false );  // false
+alert( false && false ); // false
+
+
+&& encuentra el primer valor falso
+*/
