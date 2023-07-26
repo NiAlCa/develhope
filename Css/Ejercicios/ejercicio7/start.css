@@ -57,7 +57,7 @@
     
 }
 
-#yellow  ul  li:nth-child(1){
+#yellow  ul  li:first-child{
     grid-area: yellowone;
 }
 
@@ -69,7 +69,7 @@
     grid-area: yellowthree;
 }
 
-#yellow  ul  li:nth-child(4){
+#yellow  ul  li:last-child{
     grid-area: yellowfour;
 }
 
@@ -88,7 +88,7 @@
 }
 
 
-#red  ul  li:nth-child(1){
+#red  ul  li:first-child{
     grid-area: redone;
 }
 
@@ -100,6 +100,6 @@
     grid-area: redthree;
 }
 
-#red  ul  li:nth-child(4){
+#red  ul  li:last-child{
     grid-area: redfour;
 }
