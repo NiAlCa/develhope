@@ -1,10 +1,8 @@
-function calculateAverageAge(persons) {
-  const totalAge = persons.reduce((sum, person) => sum + person.age, 0);
-  const averageAge = totalAge / persons.length;
-  return averageAge;
+function sortPeopleByAge(arr) {
+  return arr.slice().sort((person1, person2) => person1.age - person2.age);
 }
 
-const persons = [
+const people = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
   { name: 'Lucas', age: 21 },
@@ -17,6 +15,5 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const average = calculateAverageAge(persons);
-console.log(persons);
-console.log(average);
+const sortingByAge = sortPeopleByAge(people);
+console.log(sortingByAge);
