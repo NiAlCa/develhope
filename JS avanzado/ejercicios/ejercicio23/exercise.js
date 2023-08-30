@@ -32,7 +32,7 @@ miPromesa
   .then((resolve) => {console.log(resolve)
   return miPromesa2})
     .then((resolve) => console.log(resolve))
-.catch((err) => console.log(err))
+.catch((err) => console.err(err))
 
 
 
