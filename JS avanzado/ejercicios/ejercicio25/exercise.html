@@ -1,43 +1,33 @@
 <html>
   <body>
-    <div id="container" style="display: flex; align-items: center;">
-  </div>
+    <div id="container" style="display: flex; align-items: center">
   </body>
 </html>
 
+
 <script>
- 
-
   const cargarTodos = async () => {
+    try {
+      const respuesta = await fetch(
+        "https://jsonplaceholder.typicode.com/todos"
+      );
+      const todos = await respuesta.json();
 
-    try{
-    const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos')
-    const todos = await respuesta.json();
+      const ul = document.createElement("ul");
+      ul.classList.add("todo-list");
+      container.appendChild(ul);
 
-    const ul = document.createElement('ul');
-    ul.classList.add('todo-list');
-    container.appendChild(ul);
-   
-    const todoList = document.querySelector('.todo-list');
-    
-    
+      const todoList = document.querySelector(".todo-list");
 
-    todos.forEach(todos => {
-      const li = document.createElement('li');
-      li.textContent = todos.title;
-      todoList.appendChild(li);
-    }); 
-
-
-
-  }catch(error){
-    console.error('Ocurrió un error:', error);
-  }};
+      todos.forEach((todos) => {
+        const li = document.createElement("li");
+        li.textContent = todos.title;
+        todoList.appendChild(li);
+      });
+    } catch (error) {
+      console.error("Ocurrió un error:", error);
+    }
+  };
 
   cargarTodos();
-
 </script>
-
-
-
-

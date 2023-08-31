@@ -103,10 +103,10 @@ En resumen, la API Fetch es una poderosa herramienta para
       const todoList = document.querySelector('.todo-list');
   
       // Iterar a través de los datos obtenidos de la API
-      todos.forEach(todo => {
+      todos.forEach(todos => {
         // Crear un elemento de lista (li) para cada tarea (todo) y establecer su texto
         const li = document.createElement('li');
-        li.textContent = todo.title;
+        li.textContent = todos.title;
   
         // Agregar el elemento de lista a la lista no ordenada
         todoList.appendChild(li);

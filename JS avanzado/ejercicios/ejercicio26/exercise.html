@@ -5,5 +5,32 @@
 </html>
 
 <script>
-  // code here
+  const cargarTodo = async () => {
+    try{
+      const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos/4');
+      const todos = await respuesta.json();
+
+      const todoDiv = document.getElementById('container')
+
+     
+        const h2 = document.createElement('h2');
+        h2.textContent =  todos.title;
+        todoDiv.appendChild(h2);
+        
+        if( todos.completed == true ){
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox'
+          checkbox.checked = true; 
+          todoDiv.appendChild(checkbox);
+        }
+        
+    }catch (error) {
+
+      console.error('Ocurrió un error:', error);
+    }
+  }
+
+  cargarTodo();
 </script>
+
+
