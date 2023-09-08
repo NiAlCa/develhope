@@ -1,0 +1,64 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" id="todo-title" />
+        </div>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" id="todo-completed" />
+        </div>
+
+        <button type="submit" id="submit-todo"></button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+
+
+  const enviarDatosAlServidor = async () => {
+    event.preventDefault();
+    const url = "https://jsonplaceholder.typicode.com/posts";
+
+    const data = {
+      title: document.getElementById('todo-title').value,
+    }
+
+    const opciones = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
+
+    if (!document.getElementById('todo-completed').checked)  {
+      console.log('Marca checkbox.');
+      return;
+    }else{
+      try {
+      const envio = await fetch(url, opciones);
+      if (envio.ok) {
+        console.log('Enviado');
+      }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  
+      
+    }
+
+    
+  document.getElementById('submit-todo').addEventListener('click', enviarDatosAlServidor);
+
+
+
+
+
+</script>
+
