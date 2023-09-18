@@ -1,0 +1,90 @@
+
+ El DOM es una representación en memoria de la estructura de
+  un documento HTML, lo que permite a los desarrolladores 
+  acceder y manipular los elementos de una página web.
+
+
+
+1.Búsqueda de elementos por ID
+
+Para buscar elementos en el DOM por su ID, puedes utilizar
+ el método `getElementById()`. Este método devuelve un solo elemento que tenga el ID especificado. 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Elementos en el DOM</title>
+</head>
+<body>
+    <div id="miDiv">Este es un div con un ID</div>
+    <script>
+        // Buscar el elemento por su ID
+        var elemento = document.getElementById("miDiv");
+
+        // Manipular el elemento encontrado
+        elemento.innerHTML = "¡El texto ha sido cambiado!";
+    </script>
+</body>
+</html>
+
+
+2.Búsqueda de elementos por etiqueta
+
+Para buscar elementos en el DOM por su etiqueta, puedes utilizar el método
+ `getElementsByTagName()`. Este método devuelve una colección
+  de elementos con la etiqueta especificada.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Elementos en el DOM</title>
+</head>
+<body>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <script>
+        // Buscar elementos por etiqueta
+        var elementos = document.getElementsByTagName("li");
+
+        // Manipular los elementos encontrados
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].innerHTML = "Elemento " + (i + 1) + " modificado";
+        }
+    </script>
+</body>
+</html>
+
+
+### Búsqueda de elementos por clase
+
+Para buscar elementos en el DOM por su clase, 
+puedes utilizar el método `getElementsByClassName()`. 
+Este método devuelve una colección de elementos
+ que tienen la clase especificada. 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Elementos en el DOM</title>
+</head>
+<body>
+    <div class="miClase">Elemento 1</div>
+    <div class="miClase">Elemento 2</div>
+    <div class="miClase">Elemento 3</div>
+    <script>
+        // Buscar elementos por clase
+        var elementos = document.getElementsByClassName("miClase");
+
+        // Manipular los elementos encontrados
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].innerHTML = "Elemento " + (i + 1) + " modificado";
+        }
+    </script>
+</body>
+</html>
+
+
