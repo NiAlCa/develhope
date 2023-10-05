@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HelloWolrd() {
+function HelloWolrdH2() {
   const hello = <h2>Hello, World!</h2>;
 
   return (
@@ -10,4 +10,4 @@ function HelloWolrd() {
   );
 }
 
-export default HelloWolrd;
+export default HelloWolrdH2;
