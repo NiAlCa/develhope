@@ -15,7 +15,10 @@ function App() {
 
       <div><WelcomeName
       name = "Nico"
+      age={25} 
       /></div>
+
+       {/*No pasaria nada, simplemente se renderizaria el componente jsx */}
     </div>
   );
 }
