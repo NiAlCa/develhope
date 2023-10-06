@@ -4,6 +4,7 @@ import './index.css'
 import HelloWolrd from './components/ejercicio1/HelloWorld.jsx'
 import HelloWorldName from './components/ejercicio2,3y4/HelloWorldName'
 import Suma from './components/ejercio5/ejercicio5'
+import App from './app'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     name = "Paco"
     />
     <Suma/>
+    <App/>
   </React.StrictMode>,
 )

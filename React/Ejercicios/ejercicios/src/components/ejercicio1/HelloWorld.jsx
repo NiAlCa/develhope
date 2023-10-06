@@ -1,6 +1,6 @@
-import React from 'react';
 
-function HelloWolrd() {
+
+export function HelloWolrd() {
   const hello = <h1>Hello, World!</h1>;
 
   return (

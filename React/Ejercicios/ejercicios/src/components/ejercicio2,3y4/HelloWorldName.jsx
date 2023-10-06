@@ -1,5 +1,5 @@
 
-function HelloWorldName({name}) {
+export function HelloWorldName({name}) {
     const hello = <h1>Hello, {name}!</h1>;
 return (
     <div>
