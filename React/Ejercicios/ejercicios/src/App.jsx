@@ -1,6 +1,6 @@
 import { Message } from "./components/ejercicio12/Message";
 import { WelcomeName } from "./components/ejercicio16/WelcomeName";
-import HelloWolrdH2 from "./components/ejercicio7/HelloWorldH2";
+import HelloWolrdH2 from "./components/ejercicio7y11/HelloWorldH2";
 
 function App() {
   return (
