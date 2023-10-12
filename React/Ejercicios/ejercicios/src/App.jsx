@@ -1,6 +1,8 @@
 import { Message } from "./components/ejercicio12/Message";
 import { WelcomeName } from "./components/ejercicio16/WelcomeName";
 import { AlertClock } from "./components/ejercicio26/AlertClock";
+import { Counter } from "./components/ejercicio29/Counter";
+
 import HelloWolrdH2 from "./components/ejercicio7y11/HelloWorldH2";
 
 function App() {
@@ -22,6 +24,11 @@ function App() {
        {/*No pasaria nada, simplemente se renderizaria el componente jsx */}
 
        <AlertClock/>
+
+    <Counter
+    initialValue={10}
+    />
+       
     </div>
   );
 }
