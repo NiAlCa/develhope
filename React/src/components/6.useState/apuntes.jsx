@@ -1,0 +1,11 @@
+/* 
+useState es la variable que nos permitira 
+rastrear el valor de una sola variable de estado 
+y nos permitira actualizarla
+
+
+A continuacion lo que haremos ser aun boton par disminuir el valor del contador
+un boton para aumentar el valro
+un boton para restablecer el valor del contador  
+  
+*/

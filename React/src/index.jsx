@@ -2,7 +2,7 @@
 
 //De esta manera importariamos un archivo
 import { App } from "./App"
-import { HelloWorld } from "./components/1.HelloWorld.jsx/HelloWorld" //no es necesario usar la extension, tipo .js .jsx
+import { HelloWorld } from "./components/1.HelloWorld/HelloWorld" //no es necesario usar la extension, tipo .js .jsx
 //De esta manera traemos la api de react al dom
 import { createRoot } from "react-dom/client"
 

@@ -1,0 +1,16 @@
+/* 
+La composicion es un aspecto muy importante de react
+porque nos permite crear componentes que podemos usar como 
+bloques de construccion y que podemos componer entre nosotros 
+para crear interfaces de usuario cada vez mas complejas 
+
+Podremos crear un componente dodne se rendericen dentro 
+otros componentes y hacer que los otros componentes se 
+rendericen dentro del componente padre mediante children que 
+es un prop especial de react 
+
+
+cada vez que se oculta un componente tambien se desmonta
+su estado interno 
+
+*/
