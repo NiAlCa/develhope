@@ -1,4 +1,4 @@
-export function Login(){
+export function LoginUncontrolled(){
 //Desde el ejercicio 46 al 50
     function handleFormSubmit(event){
         event.preventDefault();
@@ -17,6 +17,7 @@ export function Login(){
     return(
         <div>
             <form onSubmit={handleFormSubmit}>
+                <p className="text-2xl">Introduce tus datos</p>
             <input name="username"/>
             <input name="password" type="password"/>
             <input name="session" type="checkbox"/>

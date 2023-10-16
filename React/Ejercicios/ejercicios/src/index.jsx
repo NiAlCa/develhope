@@ -4,7 +4,7 @@ import './styles/index.css'
 import HelloWolrd from './components/ejercicio1/HelloWorld.jsx'
 import HelloWorldName from './components/ejercicio2,3y4/HelloWorldName'
 
-import App from './app'
+import App from './App'
 import Suma from './components/ejercicio5/Suma'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

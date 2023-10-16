@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.welcome{
-    background-color: aquamarine;
-    border: 3px solid blue;
-}

@@ -1,5 +1,6 @@
+import { LanguageContext } from "../ejercicio70/LanguageContext";
 import "./Clock.scss";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export function Clock(){
 
@@ -11,11 +12,17 @@ export function Clock(){
     }, 1000);
   }, []);
 
+  const language = useContext(LanguageContext)
+
 
 
     return(
         <div className="clock">
-            <h2>Hora:{clock.toLocaleTimeString()}</h2>
+            <h2>
+              {language === 'en' ? 'Hello, World!' : 'Hola Mundo!'}
+              
+              
+              {clock.toLocaleTimeString()}</h2>
         </div>
     )
 }
