@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import './styles/index.css'
 import HelloWolrd from './components/ejercicio1/HelloWorld.jsx'
 import HelloWorldName from './components/ejercicio2,3y4/HelloWorldName'
 
