@@ -1,30 +1,34 @@
-import { useState } from "react"
+import { useEffect, useState } from "react";
 
-export function GithubUser({user}){
+export function GithubUser({ user }) {
+  const [userData, setUserData] = useState(null);
 
-    let url = `https://api.github.com/users/${user}`
+  useEffect(() => {
+    const fetchGithubUser = async () => {
+      try {
+        const response = await fetch(`https://api.github.com/users/${user}`);
+        const json = await response.json();
 
-    async function fetchGithubUser(user){
-        const [data, setData] = useState(null)
+        setUserData(json);
+      } catch (error) {
+        console.error(error);
+        setUserData(null);
+      }
+    };
+    fetchGithubUser();
+  }, [user]);
 
-        try{
-            const response  = await fetch(url)
-            const json = await Response.json()
+  return (
+    <div>
+     
 
-            setData(json)
-        }catch(error){
-            console.error(error)
-            setData(null)
-        }
-    }
-
-
-
-    return (
-        <div>
-
-
-
-        </div>
-    )
+          <div>
+            <p>Nombre: {userData.name}</p>
+            <p>Usuario: {userData.login}</p>
+            <img src={userData.avatar_url} alt="Avatar" />
+          </div>
+       
+     
+    </div>
+  );
 }

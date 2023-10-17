@@ -16,6 +16,7 @@ import { Container } from "./components/ejercicio67/Container";
 import { LanguageContext } from "./components/ejercicio70/LanguageContext";
 
 import HelloWolrdH2 from "./components/ejercicio7y11/HelloWorldH2";
+import { GithubUser } from "./components/ejercicio73/GithubUser";
 
 let colors = [
   { id: 1, name: "Red" },
@@ -33,6 +34,13 @@ function App() {
 
   return (
     <div className="principal">
+     
+<GithubUser
+user="nicopum"
+
+/>
+
+
       <Container title={"Aprieta el titulo!"}>
         <Colors colors={colors} />
         <FocusableInput />
@@ -62,6 +70,9 @@ function App() {
       <button onClick={() => handleSetLanguage('en')}>EN</button>
       <Clock/>
       </LanguageContext.Provider>
+
+
+      
 
       
     </div>
