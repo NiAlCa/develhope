@@ -20,15 +20,16 @@ export function GithubUser({ user }) {
 
   return (
     <div>
-     
-
-          <div>
-            <p>Nombre: {userData.name}</p>
-            <p>Usuario: {userData.login}</p>
-            <img src={userData.avatar_url} alt="Avatar" />
-          </div>
-       
-     
+      <h3>User Details</h3>
+      {userData ? (
+        <div>
+          <p>Name: {userData.name}</p>
+          <p>Username: {userData.login}</p>
+          <img src={userData.avatar_url} alt="Avatar" />
+        </div>
+      ) : (
+        <p>Loading user data...</p>
+      )}
     </div>
   );
 }

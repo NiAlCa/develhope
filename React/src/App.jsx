@@ -12,7 +12,11 @@ import { LanguageContext } from "./components/14.Context/LenguageContex";
 import { useState } from "react";
 import { GithubUser } from "./components/15.Fetching/GithubUser";
 import { CounterHook } from "./components/16.CustomHooks/CounterHook";
-
+import { Route, Routes, Link} from "react-router-dom";
+import { Catalogue } from "./components/17.ReactRouter/Catalogue";
+import { Product } from "./components/17.ReactRouter/Product";
+import { GithubUsers } from "./components/18.SWR/GithubUsers";
+import { GithubUser2 } from "./components/18.SWR/GithubUser2";
 
 /*Realmente para mostrar en pantalla lo mostraremos desde este archivo 
 que usaremos de punto intermedio, solo deberiamos tener que renderizar un solo componente dentro
@@ -20,25 +24,54 @@ de l araiz de nuestra aplicacion en este caso el componente raiz que vamos a ren
 en nuestra raiz va a ser App*/
 
 export function App() {
-
-    const [language, setLanguage] = useState('en')
+  /*const [language, setLanguage] = useState('en')
 
     function handleSetLanguage(language) {
         setLanguage(language)
-    }
+    }*/
 
-    
-    return (
+  return (
+    <div>
+      <Container title={<div>
+        <h1> My awesome app</h1>
+        <div>
+          <Link to="/">Home</Link> | <Link to="products">Product</Link> | <Link to="users">User</Link>
+          
+        </div>
+
+      </div>}>
+
+
+
+      <Routes>
+        <Route path="/" element={<Welcome name="juan" age="10" />} /> 
+        <Route path="products" element={<Catalogue />}>
+          <Route index element={<p>Select a product</p>}/>
+          <Route path=":id" element={<Product />}/>
+        </Route>
+        <Route path="users" element={<GithubUsers />}>
+            <Route path=":username" element={<GithubUser2 />}></Route>
+        </Route>
+        <Route path="*" element={<div><p>Ruta no encontrada</p></div>}/>
+        
+      </Routes>
+      </Container>
+    </div>
+  );
+}
+
+{
+  /* Apuntes antes del root
     <div>
 
   
         <button onClick={() => handleSetLanguage('it')}>IT</button> 
-    <button onClick={() => handleSetLanguage('en')}>EN</button> {/*sEGUIMOS EN EL COMPONENTE HELLOWORLD */}
+    <button onClick={() => handleSetLanguage('en')}>EN</button> {/*sEGUIMOS EN EL COMPONENTE HELLOWORLD *}
     <Container>
      
       
       <LanguageContext.Provider
-      value={language}> {/*Haciendo esto toda la app esta bajo el contexto del lenguaje */}
+      value={language}> {/*Haciendo esto toda la app esta bajo el contexto del lenguaje *}
         <h1>My awesome Application</h1>
 
         <GithubUser
@@ -51,7 +84,7 @@ export function App() {
 
         {/* codigo 4
             Aqui estamos viendo como usar el componente y su pront
-            */}
+            *}
         <Welcome
           name="Nico" //de esta manera agregariamos un string
           age={10} //de esta manera agregariamos un numero
@@ -59,19 +92,19 @@ export function App() {
 
         {/* 
             vamos a reutilizar el componente
-            */}
+            *}
 
         <Welcome name="Laura" age={110} />
 
-        {/*Fin 2 props */}
+        {/*Fin 2 props *}
 
-        {/*incio 4 events */}
+        {/*incio 4 events *}
 
         <AlertClock />
-        {/*Fin 4 events */}
+        {/*Fin 4 events *}
 
-        {/*inicio 6 counter */}
-
+        {/*inicio 6 counter *}
+/*
         <Counter />
 
         <Clock />
@@ -92,8 +125,6 @@ export function App() {
 
       </LanguageContext.Provider>
     </Container>
-    </div>
-  );
+    </div> */
+  //Ahora volvemos al index.jsx codigo 3
 }
-
-//Ahora volvemos al index.jsx codigo 3

@@ -5,6 +5,7 @@ import { App } from "./App"
 import { HelloWorld } from "./components/1.HelloWorld/HelloWorld" //no es necesario usar la extension, tipo .js .jsx
 //De esta manera traemos la api de react al dom
 import { createRoot } from "react-dom/client"
+import { Root } from "./components/17.ReactRouter/Root"
 
 const helloWorldElement = <HelloWorld/>
  
@@ -33,8 +34,9 @@ el objeto raiz
 
 //codigo 3 venimos de app.jsx 
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById('root')).render(<Root />)
 
 //Fin 1.Hello world
 
 //Inicio 2.Props
+

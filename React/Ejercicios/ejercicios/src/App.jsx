@@ -17,6 +17,7 @@ import { LanguageContext } from "./components/ejercicio70/LanguageContext";
 
 import HelloWolrdH2 from "./components/ejercicio7y11/HelloWorldH2";
 import { GithubUser } from "./components/ejercicio73/GithubUser";
+import { GithubUsers } from "./components/ejercicio74/GithubUsers";
 
 let colors = [
   { id: 1, name: "Red" },
@@ -39,6 +40,8 @@ function App() {
 user="nicopum"
 
 />
+
+
 
 
       <Container title={"Aprieta el titulo!"}>
@@ -70,6 +73,8 @@ user="nicopum"
       <button onClick={() => handleSetLanguage('en')}>EN</button>
       <Clock/>
       </LanguageContext.Provider>
+
+      <GithubUsers />
 
 
       
