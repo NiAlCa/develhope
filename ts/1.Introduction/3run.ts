@@ -1,0 +1,9 @@
+/* 
+ejecutaremos la compilacion del codigo de TS a JS de la siguiente manera
+ 
+tsc example.ts
+
+
+
+
+*/
